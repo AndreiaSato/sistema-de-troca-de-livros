@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de livros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/css">
+</head>
+<body class="bg-info">
+    <div>
+        <%- include('header.ejs') %>
+    </div>
+    <div class="container-fluid mb-3">
+        <div class="row mt-5">
+            <div class="col-12">
+                <h1 class="text-center fw-bold mt-4 text-white">Cadastre seu livro</h1>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="border border-4 shadow shadow-lg rounded p-3 pt-2">
+                    <form action="" method="post">
+                        <label class="form-label text-white fw-bold fs-4" for="titulo">Titulo do livro</label>
+                        <input class="form-control" id="titulo" name="titulo" type="text" placeholder="Titulo do livro..." required>
+                        <label class="form-label text-white fw-bold fs-4 mt-2" for="autor">Autor</label>
+                        <input class="form-control" id="autor" name="autor" type="text" placeholder="Nome/Pseudônimo do autor do livro..." required>
+                        <label class="form-label text-white fw-bold fs-4 mt-2" for="condicao">Condição do livro</label>
+                        <input class="form-control" id="condicao" name="condicao" type="" placeholder="Diga as condições de cuidado do livro..." required>
+                        <label class="form-label text-white fw-bold fs-4 mt-2" for="descricao">Descrição do livro</label>
+                        <input class="form-control" id="descricao" name="descricao" type="text" placeholder="Diga algo sobre o livro, sua experiencia com ele, algum defeito fisico, algo que queira comentar...">
+                        <button class="btn btn-danger mt-3 me-3" type="reset">Limpar campos</button>
+                        <button class="btn btn-primary mt-3" type="submit">Cadastrar livro</button>
+                    </form>
+                </div>
+                <div>
+                    <h1 class="text-center fw-bold mt-4 text-white ">Meus livros cadastrados</h1>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+</body>
+</html>

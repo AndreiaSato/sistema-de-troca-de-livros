@@ -1,0 +1,1 @@
+O trabalho começou com o básico, definindo a pasta e criando o MVC básico, com isso via CMD foi dado start no node, via CMD, foi usado "npm start", com isso foi instalado o express, "npm install express" e depois o EJS "npm install express ejs"
