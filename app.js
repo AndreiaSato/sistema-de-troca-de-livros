@@ -1,4 +1,22 @@
-const express = require('express');
+import express from 'express';
+import routes from './routes.js';
+import cors from 'cors';
+
+const app = express();
+
+app.use(cors());
+
+//indicar para o express ler body ou json
+app.use(express.json());
+
+//usar o router 
+app.use(routes);
+
+export default app;
+
+
+
+/* const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const connection = require('./config/db');
@@ -72,4 +90,4 @@ app.post('createLivro', (req, res) => {
         console.log('Livro inserido com sucesso:', result);
         res.redirect('/livros'); // Redirecionamento após a inserção (opcional)
     });
-});
+}); */
