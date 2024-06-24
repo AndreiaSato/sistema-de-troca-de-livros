@@ -1,6 +1,7 @@
 import express from 'express';
 import routes from './routes.js';
 import cors from 'cors';
+import path from 'path';
 
 const app = express();
 
@@ -12,59 +13,14 @@ app.use(express.json());
 //usar o router 
 app.use(routes);
 
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 export default app;
 
 
 
-/* const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-const connection = require('./config/db');
-
-const app = express();
-
-const PORTA = 3000;
-
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-
-app.listen(PORTA, () => {
-    console.log(`Servidor rodando na porta: ${PORTA}`);
-});
-
-app.get('/', (req, res) => {
-    res.render('index');
-});
-
-app.get('/login', (req, res) => {
-    res.render('login');
-});
-
-app.get('/meusLivros', (req, res) => {
-    res.render('meusLivros');
-});
-
-app.get('/minhasPropostas', (req, res) => {
-    res.render('minhasPropostas');
-});
-
-app.get('/registrar', (req, res) => {
-    res.render('registrar');
-});
-
-app.get('/livros', (req, res) => {
-    connection.query("SELECT * FROM livro;", (err, results, fields) => {
-        if(err){
-            console.log("Erro ao consultar o banco: " + err);
-            return;
-        }
-        console.log(results);
-        res.render('livros', { obj_livros: results });
-    })
-});
+/* 
 
 app.get('/css/css', (req, res) =>{
     res.sendFile(path.join(__dirname, 'public', 'style.css'));
