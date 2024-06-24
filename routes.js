@@ -39,7 +39,7 @@ router.get('/livros', (req, res) => {
 router.get('/usuarios', usuarioController.index);
 router.get('/usuarios/:id', usuarioController.show);
 router.post('/cadastrar', usuarioController.cadastrar);
-router.put('/usuarios/:id', usuarioController.update);
+router.patch('/usuarios/:id', usuarioController.update);
 router.delete('/usuarios/:id', usuarioController.delete);
 
 

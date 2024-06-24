@@ -11,7 +11,7 @@ class usuarioController{
     async show(req, res){
         const id = req.params.id;
         const row = await usuarioModel.findById(id);
-        res.json(resultado);
+        res.json(row);
     }
     //criar dados
     async cadastrar(req, res){
@@ -32,6 +32,7 @@ class usuarioController{
         const row = await usuarioModel.delete(id);
         res.json(row);
     }
+
 
 }
 

@@ -19,12 +19,12 @@ class usuarioModel{
     }
     //atualizar
     update(id, senha){
-        const sql = "UPDATE usuario SET `senha` = ? WHERE id_usuario=?;"
-        return consulta(sql, [senha, id], 'Não foi possível Atualiza!')
+        const sql = "UPDATE usuario SET senhaUsuario = ? WHERE idUsuario=?;"
+        return consulta(sql, [senha, id], 'Não foi possível Atualizar!')
     }
     //deletar
     delete(id){
-        const sql = "DELETE FROM usuario WHERE id_usuario=?;"
+        const sql = "DELETE FROM usuario WHERE idUsuario=?;"
         return consulta(sql, id, 'Não foi possível apagar!')
     }
     login(email,senha){
