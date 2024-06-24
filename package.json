@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Trabalho de faculdade (Positivo) onde é criado um sistema em node.js para gerenciar um sistema de troca de livros de pessoa para pessoa (inspirado no Facebook Marketplace). O trabalho é feito com 4 integrantes, Daniel, João, Andreia e Paulo.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "mysql": "^2.18.1",
