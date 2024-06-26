@@ -1,13 +1,9 @@
-import app from "./app.js"
-import bodyParser from "body-parser"
+import app from "./app.js" //importando o arquivo onde tem todas as configuraçãoe do servidor
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000 // identifica a porta utilizada pelo servidor
 
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json())
-
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
 app.listen(PORT, ()=>{
-    console.log(`Servidor rodando no endereço: http://localhost:${PORT}`)
+    console.log(`Servidor rodando no endereço: http://localhost:${PORT}`) //cria o servidor com a porta definida e exibe a URL
 })
 

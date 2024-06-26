@@ -1,9 +1,9 @@
 import express from 'express';
 import routes from './routes.js';
 import cors from 'cors';
-import path from 'path';
+import path from 'path'; //importar bibliotecas
 
-const app = express();
+const app = express(); 
 
 app.use(cors());
 
@@ -11,10 +11,10 @@ app.use(cors());
 app.use(express.json());
 
 //usar o router 
-app.use(routes);
+app.use(routes); // para usar as rotas que foram criadas no arquivo routes.js
 
-app.set('view engine', 'ejs');
-app.set('views', './views');
+app.set('view engine', 'ejs'); // utiliza em  engine para renderizar as paginas atraves do ejs
+app.set('views', './views');  // para buscar as paginas do views
 
 export default app;
 
