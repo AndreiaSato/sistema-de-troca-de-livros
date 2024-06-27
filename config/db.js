@@ -25,9 +25,9 @@ connection.connect((err) => {
  * @returns objeto da Promisse 
  */
 
-export const consulta = (sql, valores='', mensagemReject)=>{
-    return new Promise((resolve, reject) => {
-        connection.query(sql, valores, (erro, resultado) => {
+export const consulta = (sql, valores='', mensagemReject)=>{ //pega os dados que são pedidos no banco
+    return new Promise((resolve, reject) => {  //promise: o banco faz uma promessa que vai devolver a msg mas não sabe quando
+        connection.query(sql, valores, (erro, resultado) => { //onde executa a função no banco após a consulta
             if(erro) return reject (erro)
             const row = JSON.parse(JSON.stringify(resultado))
             return resolve(row)
